@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request
 from pymongo import MongoClient
 
-app = Flask(__name__)
+MONGO_URI = os.getenv("MONGO_URI")
 
-client = MongoClient("mongodb+srv://joannadave63_db_user:Theesosa%40231@survey-cluster.ti0l1aa.mongodb.net/?appName=survey-cluster")
-db = client["surveyDB"]
+client = MongoClient(MONGO_URI)
+db = client["survey_db"]
 collection = db["users"]
 
 @app.route('/')
