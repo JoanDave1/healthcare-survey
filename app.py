@@ -8,6 +8,8 @@ client = MongoClient(MONGO_URI) if MONGO_URI else None
 db = client["survey_db"]
 collection = db["users"]
 
+app = Flask(__name__)
+
 @app.route('/')
 def home():
     return render_template('index.html')
