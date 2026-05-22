@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Healthcare Survey Form</title>
+</head>
+
+<body>
+
+    <h1>Healthcare Income Survey</h1>
+
+    <form method="POST">
+
+        <label>Age:</label><br>
+        <input type="number" name="age"><br><br>
+
+        <label>Gender:</label><br>
+        <select name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br>
+
+        <label>Total Income:</label><br>
+        <input type="number" name="income"><br><br>
+
+        <h2>Expenses</h2>
+
+        <input type="checkbox" name="utilities">
+        <label>Utilities</label>
+        <input type="number" name="utilities_amount"><br><br>
+
+        <input type="checkbox" name="entertainment">
+        <label>Entertainment</label>
+        <input type="number" name="entertainment_amount"><br><br>
+
+        <input type="checkbox" name="school_fees">
+        <label>School Fees</label>
+        <input type="number" name="school_fees_amount"><br><br>
+
+        <input type="checkbox" name="shopping">
+        <label>Shopping</label>
+        <input type="number" name="shopping_amount"><br><br>
+
+        <input type="checkbox" name="healthcare">
+        <label>Healthcare</label>
+        <input type="number" name="healthcare_amount"><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+</html>
+
