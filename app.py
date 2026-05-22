@@ -1,9 +1,10 @@
+import os
 from flask import Flask, render_template, request
 from pymongo import MongoClient
 
 MONGO_URI = os.getenv("MONGO_URI")
 
-client = MongoClient(MONGO_URI)
+client = MongoClient(MONGO_URI) if MONGO_URI else None
 db = client["survey_db"]
 collection = db["users"]
 
@@ -30,6 +31,5 @@ def submit():
     return "Data submitted successfully!"
 
 if __name__ == '__main__':
-    import os
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
